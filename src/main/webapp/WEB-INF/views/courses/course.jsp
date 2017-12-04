@@ -18,37 +18,37 @@
 			<c:if test="${empty msg}">
 				<div class="panel panel-info">
 					<div class="panel-heading">
-						<h3 class="panel-title">Profile User</h3>
+						<h3 class="panel-title">Course Details</h3>
 					</div>
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-md-3 col-lg-3 " align="center">
-								<img alt="User Pic"
+								<img alt="course Pic"
 									src="https://cdn1.iconfinder.com/data/icons/business-charts/512/customer-512.png"
 									class="img-circle img-responsive">
 							</div>
 							<div class=" col-md-9 col-lg-9 ">
-								<table class="table table-user-information">
+								<table class="table table-course-information">
 									<tbody>
 										<tr>
-											<td>First Name</td>
-											<td>${user.first_name}</td>
+											<td>Course Name</td>
+											<td>${course.name}</td>
 										</tr>
 										<tr>
-											<td>Last Name</td>
-											<td>${user.last_name}</td>
-										</tr>
-										<tr>
-											<td>Email</td>
-											<td>${user.email}</td>
+											<td>Category</td>
+											<td>${course.category}</td>
 										</tr>
 										<tr>
 											<td>Description</td>
-											<td>${user.bio}</td>
+											<td>${course.description}</td>
 										</tr>
 										<tr>
-											<td>Employee Code</td>
-											<td>${user.employee_code}</td>
+											<td>Code</td>
+											<td>${course.code}</td>
+										</tr>
+										<tr>
+											<td>Price</td>
+											<td>${course.price}</td>
 										</tr>
 									</tbody>
 								</table>
