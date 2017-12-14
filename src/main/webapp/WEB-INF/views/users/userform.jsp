@@ -1,9 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ page session="false"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<div class="container" style="margin: 0 auto;">
+<div class="container">
 	<c:choose>
 		<c:when test="${status == 'add'}">
 			<h1>Add User</h1>
@@ -13,7 +14,7 @@
 		</c:otherwise>
 	</c:choose>
 	<br />
-	<div class="col-md-6" style="margin: 0 auto;">
+	<div class="col-md-6">
 		<spring:url value="/user" var="userActionUrl" />
 		<form:form class="form-horizontal" method="post"
 			modelAttribute="userForm" action="${userActionUrl}">

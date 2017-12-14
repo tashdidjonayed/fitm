@@ -25,4 +25,22 @@
 		<put-attribute name="title" value="HOME" />
 		<put-attribute name="body" value="/WEB-INF/views/users/userform.jsp" />
 	</definition>
+
+	<!-- List Course -->
+	<definition name="coursehome" extends="baseLayout">
+		<put-attribute name="title" value="HOME" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/courses/listCourse.jsp" />
+	</definition>
+
+	<definition name="/course" extends="baseLayout">
+		<put-attribute name="title" value="HOME" />
+		<put-attribute name="body" value="/WEB-INF/views/courses/course.jsp" />
+	</definition>
+
+	<definition name="courseForm" extends="baseLayout">
+		<put-attribute name="title" value="HOME" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/courses/courseform.jsp" />
+	</definition>
 </tiles-definitions>

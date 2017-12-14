@@ -11,6 +11,7 @@
 <meta name="author" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <spring:url value="/assets/css/bootstrap.min.css" var="bootstrapCss" />
+<spring:url value="/assets/css/style.css" var="styleCss" />
 <spring:url value="/assets/js/bootstrap.min.js" var="bootstrapJs" />
 <spring:url value="/assets/js/jquery.min.js" var="jquery" />
 

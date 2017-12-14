@@ -18,36 +18,38 @@
 		<div class="md-col-8">
 			<fieldset>
 				<legend>
-					<h2>User List</h2>
+					<h2>course List</h2>
 				</legend>
 				<table class="table table-hover table-dark">
 					<thead class="bg-primary">
 						<tr>
 							<th scope="col">#</th>
-							<th scope="col">First Name</th>
-							<th scope="col">Last Name</th>
-							<th scope="col">Email</th>
+							<th scope="col">Course Name</th>
+							<th scope="col">Category</th>
 							<th scope="col">Description</th>
+							<th scope="col">Code</th>
 							<th></th>
 						</tr>
 					</thead>
 					<tbody>
 						<c:if test="${empty msg}">
-							<c:forEach items="${users}" var="user" varStatus="count">
+							<c:forEach items="${courses}" var="course" varStatus="count">
 								<tr>
 									<th scope="row">${count.index + 1}</th>
-									<td>${user.first_name}</td>
-									<td>${user.last_name}</td>
-									<td>${user.email}</td>
-									<td>${user.bio}</td>
-									<td><spring:url value="/${user.user_id}"
+									<td>${course.name}</td>
+									<td>${course.category}</td>
+									<td>${course.description}</td>
+									<td>${course.code}</td>
+									<td><spring:url value="/course/${course.course_id}"
 											var="detailActionUrl" />
 										<button class="btn btn-info"
 											onclick="location.href='${detailActionUrl}'">Detail</button>
-										<spring:url value="/${user.user_id}/edit" var="editActionUrl" />
+										<spring:url value="/course/${course.course_id}/edit"
+											var="editActionUrl" />
 										<button class="btn btn-warning"
 											onclick="location.href='${editActionUrl}'">Edit</button> <spring:url
-											value="/${user.user_id}/delete" var="deleteActionUrl" />
+											value="/course/${course.course_id}/delete"
+											var="deleteActionUrl" />
 										<button class="btn btn-danger"
 											onclick="location.href='${deleteActionUrl}'">Delete</button></td>
 								</tr>
@@ -58,7 +60,7 @@
 				<div class="col-md-12 row-mt">
 					<div class="col-sm-3">
 						<tag:paginate max="${max}" offset="${offset}" count="${count}"
-							uri="" next="&raquo;" previous="&laquo;" />
+							uri="courseList" next="&raquo;" previous="&laquo;" />
 					</div>
 					<div class="col-sm-6"></div>
 				</div>
